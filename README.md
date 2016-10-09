@@ -1,22 +1,22 @@
-# artikcloud-mqtt-js-sample
-artik cloud mqtt sample code using javascript
+# MQTT JavaScript sample code
+Sample JavaScript code sends messages to ARTIK Cloud MQTT endpoint. 
 
-## requirements
+## Prerequisites
   - node
   - npm 
 
-## setup
-  - create ARTIK Cloud account and create sample device (link coming soon) 
-  - rename 'template_config.json' to 'config.json'
-  - set your 'deviceId' and 'deviceToken' in config.json file
-
-## install packages with following command
+## Setup / Installation:
+ 1. Sign into [My ARTIK Cloud](https://artik.cloud/)
+ 2. On the device dashboard, click to connect a new device. Select the Demo Fire Sensor (from cloud.artik.sample.demofiresensor) and name your sensor SampleFireSensor (or any name you'd like).
+ 3. Go to Settings icon for the device you just added. Get the **device ID** and **device token**. If the token does not already exist, click "GENERATE DEVICE TOKEN…" to get one.
+ 4. install packages with following command
 %> npm install
+ 5. Prepare source files. Rename **template_config.json** to **config.json**. Then copy the device ID and device token obtained before to config.json file.
 
-## run the application
+## Run the application
 %> node app.js
 
-sample response:
+Here is the sample response:
 ```text
 publishing data: {"temp":214}
 publish path: /v1.1/messages/<redacted>
