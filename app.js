@@ -1,4 +1,4 @@
-var mqtt = require('mqtt’);
+var mqtt = require('mqtt');
 var CONFIG = require('./config.json');
 
 // The port number is specified at
