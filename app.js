@@ -13,9 +13,8 @@ var credentials = {
 // 'mqtt', 'mqtts', 'tcp', 'tls', 'ws', 'wss'
 //
 // For ARTIK Cloud, mqtt client must be SSL-capable. 
-// ’tls’ and ‘mqtts’ protocols work
-var client  = mqtt.connect('tls://api.artik.cloud', credentials);
-//var client  = mqtt.connect('mqtts://api.artik.cloud', credentials); //This is also working
+// use ‘mqtts’, which has security layer on top of mqtt
+var client  = mqtt.connect('mqtts://api.artik.cloud', credentials);
 
 // ARTIK Cloud only allows the following 2 paths on MQTT
 var PUBLISH_MESSAGE_PATH = "/v1.1/messages/" + CONFIG.DEVICE_ID;
