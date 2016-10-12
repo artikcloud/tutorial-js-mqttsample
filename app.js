@@ -29,6 +29,10 @@ client.on('connect', function () {
 
   client.publish(PUBLISH_MESSAGE_PATH, sampleData);
   console.log("Use browser to see your data in realtime https://artik.cloud/my/data")
+
+  // Example for subscribing to receive Action
+  // client.subscribe(SUBSCRIBE_ACTION_PATH);
+
 })
 
 // Wait for some time then close the session
