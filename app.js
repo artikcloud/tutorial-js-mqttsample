@@ -22,30 +22,29 @@ var SUBSCRIBE_ACTION_PATH = "/v1.1/actions/" + CONFIG.DEVICE_ID;
 
 
 client.on('connect', function () {
- 
+  console.log("Start MQTT session ...");
   var sampleData = getSampleData();
   console.log("publishing data:", sampleData)
   console.log("publish path:", PUBLISH_MESSAGE_PATH);
 
-  client.publish(PUBLISH_MESSAGE_PATH, getSampleData());
+  client.publish(PUBLISH_MESSAGE_PATH, sampleData);
   console.log("Use browser to see your data in realtime https://artik.cloud/my/data")
-
-  // Example for subscribing to receive Action
-  // client.subscribe(SUBSCRIBE_ACTION_PATH);
-
 })
 
-client.on('message', function (topic, message) {
-  console.log(message.toString())
-  client.end()
-})
+// Wait for some time then close the session
+setTimeout(function(){
+  client.end(true, function () {
+      console.log("End MQTT session...");
+      })
+    }, 2000);
 
 function getSampleData() {
-	//fields key/value for you ARTIK Cloud device
-	return JSON.stringify({
-	  "temp": 214
-	})
+  var tempVal = Math.floor((Math.random() * 200));
 
+  //fields key/value for you ARTIK Cloud device
+  return JSON.stringify({
+    "temp": tempVal
+  })
 }
 
 
