@@ -32,15 +32,9 @@ client.on('connect', function () {
 
   // Example for subscribing to receive Action
   // client.subscribe(SUBSCRIBE_ACTION_PATH);
+  client.end()
 
 })
-
-// Wait for some time then close the session
-setTimeout(function(){
-  client.end(true, function () {
-      console.log("End MQTT session...");
-      })
-    }, 2000);
 
 function getSampleData() {
   var tempVal = Math.floor((Math.random() * 200));
