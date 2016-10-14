@@ -24,7 +24,7 @@ var SUBSCRIBE_ACTION_PATH = "/v1.1/actions/" + CONFIG.DEVICE_ID;
 client.on('connect', function () {
   console.log("Start MQTT session ...");
   var sampleData = getSampleData();
-  console.log("publishing data:", sampleData)
+  console.log("publishing data:", sampleData);
   console.log("publish path:", PUBLISH_MESSAGE_PATH);
 
   client.publish(PUBLISH_MESSAGE_PATH, sampleData);
@@ -33,7 +33,7 @@ client.on('connect', function () {
   // Example for subscribing to receive Action
   // client.subscribe(SUBSCRIBE_ACTION_PATH);
   client.end()
-
+  console.log("End MQTT session ...");
 })
 
 function getSampleData() {
