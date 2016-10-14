@@ -1,5 +1,6 @@
-# MQTT JavaScript sample code
-Sample JavaScript code sends messages to ARTIK Cloud MQTT endpoint. 
+# MQTT client sample code in JavaScript
+
+The sample code establishes a secure MQTT session with ARTIK Cloud, sends one message, and ends the session.
 
 ## Prerequisites
   - node
@@ -26,4 +27,30 @@ publishing data: {"temp":214}
 publish path: /v1.1/messages/<redacted>
 Use browser to see your data in realtime https://artik.cloud/my/data
 ```
+
+## View your data in My ARTIK Cloud
+
+Have you visited ARTIK Cloud [data visualization tool](https://artik.cloud/my/data)?
+
+Select your device from the charts to view your device data in realtime. Run the application multiple times in your terminal, which sends a few random values. Here's a screenshot:
+
+![GitHub Logo](./img/screenshot-firesensor-datachart.png)
+
+More about ARTIK Cloud
+---------------
+
+If you are not familiar with ARTIK Cloud, we have extensive documentation at https://developer.artik.cloud/documentation
+
+The full ARTIK Cloud API specification can be found at https://developer.artik.cloud/documentation/api-reference/
+
+Peek into advanced sample applications at https://developer.artik.cloud/documentation/samples/
+
+To create and manage your services and devices on ARTIK Cloud, visit the Developer Dashboard at https://developer.artik.cloud
+
+License and Copyright
+---------------------
+
+Licensed under the Apache License. See [LICENSE](LICENSE).
+
+Copyright (c) 2016 Samsung Electronics Co., Ltd.
 
